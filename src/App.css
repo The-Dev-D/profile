@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@300&display=swap');
+*{
+  font-family: 'Encode Sans SC', sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --theme : white;
+  --color : black;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  background: var(--theme);
+  color: var(--color);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header{
+  height: 3.2rem;
+  box-shadow: 0px 0px 3px rgb(144, 143, 143);
+}
+.flex {
   display: flex;
-  flex-direction: column;
+}
+.vc {
   align-items: center;
+}
+.sb {
+  justify-content: space-between;
+}
+.hc
+{
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.vb{
+  align-items: baseline;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profilename {
+  transform: translateY(-50%);
+  font-weight: bold;
+  margin-left: 0.5rem;
+  font-size: larger;
+}
+i {
+  margin: 1rem;
+}
+.coverpicture {
+  margin-top: 0.5rem;
+}
+.cover {
+  width: 99vw;
+  border-radius: 20px;
+  aspect-ratio:4;
+  object-fit: cover;
+}
+.profile-wrap {
+  bottom: 0;
+  left: 2rem;
+  transform: translateY(50%);
+  position: absolute;
+  
+}
+.profile{
+  background:linear-gradient(45deg,rgb(165, 165, 165),rgb(255, 255, 255));
+  height: 7rem;
+  width: 7rem;
+}
+.wrapper{
+  position: relative;
+}
+fieldset {
+  width: 90%;
+  border: 1px solid rgba(128, 128, 128, 0.729);
+  padding: 1rem;
+  border-radius: 20px;
+}
+.fill{
+  width: 100%;
+  margin-top: 4rem;
+}
+.theme {
+  color: black;
 }
