@@ -4,10 +4,10 @@ export default function Defenitions() {
     return (
         <div className="fill flex vc hc">
             <fieldset>
-                <legend>profile</legend>
-                username : dev-D <br/>
-                education : BCA 
-
+                <legend>Profile</legend>
+                <b> Username : </b> dev-D <br/><br/>
+                <b> Education :</b> BCA <br/><br/>
+                <b> Works on :</b> HTML, CSS, JS, Php, React, SQL.
             </fieldset>
         </div>
     )

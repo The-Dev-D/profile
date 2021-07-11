@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 *{
-  font-family: 'Encode Sans SC', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 :root {
   --theme : white;
@@ -11,8 +11,9 @@ body{
   color: var(--color);
 }
 header{
+  width: 100vw;
   height: 3.2rem;
-  box-shadow: 0px 0px 3px rgb(144, 143, 143);
+  box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.845);
 }
 .flex {
   display: flex;
@@ -38,12 +39,14 @@ header{
 }
 i {
   margin: 1rem;
+  cursor: pointer;
+  color:var(--color);
 }
 .coverpicture {
   margin-top: 0.5rem;
 }
 .cover {
-  width: 99vw;
+  width: 98vw;
   border-radius: 20px;
   aspect-ratio:4;
   object-fit: cover;
@@ -57,22 +60,32 @@ i {
 }
 .profile{
   background:linear-gradient(45deg,rgb(165, 165, 165),rgb(255, 255, 255));
-  height: 7rem;
-  width: 7rem;
+  width: 12vh;
+  aspect-ratio: 1;
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: 1px 1px 4px --var(color);
 }
 .wrapper{
   position: relative;
 }
 fieldset {
-  width: 90%;
+  width: 80vw;
   border: 1px solid rgba(128, 128, 128, 0.729);
   padding: 1rem;
   border-radius: 20px;
+  font-weight: 500;
 }
 .fill{
   width: 100%;
   margin-top: 4rem;
 }
-.theme {
-  color: black;
+.foot
+{
+  margin-top: 2rem;
+  width: 100%;
+}
+@media only screen and (max-width:720px) {
+  .cover {
+    aspect-ratio: 2;
+  }
 }
