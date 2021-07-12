@@ -6,7 +6,12 @@ export default function Defenitions() {
             <fieldset>
                 <legend>Profile</legend>
                 <b> Username : </b> dev-D <br/><br/>
-                <b> Education :</b> BCA <br/><br/>
+                <b> Education :</b> <br/>
+                &nbsp;&nbsp;&nbsp; <b>L.P  School :</b> St: Dominic Savio <br/>
+                &nbsp;&nbsp;&nbsp; <b>U.P School :</b> M.K.M <br/>
+                &nbsp;&nbsp;&nbsp; <b>H.S School :</b>M.K.M<br/>
+                &nbsp;&nbsp;&nbsp; <b>Degree :</b> b.p.c college piravom<br/><br/>
+
                 <b> Works on :</b> HTML, CSS, JS, Php, React, SQL.
             </fieldset>
         </div>

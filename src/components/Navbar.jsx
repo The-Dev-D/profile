@@ -18,18 +18,16 @@ export default function Navbar() {
         }
     }
     return (
-        <div>
-            <header className="flex vc sb">
-                <div className="name theme">
-                    <i class="fa fa-terminal theme" aria-hidden="true"></i>
-                    dev:D
+        <header className="flex vc sb">
+            <div className="name theme">
+                <i class="fa fa-terminal theme" aria-hidden="true"></i>
+                dev:D
+            </div>
+            <IconButton size="small">
+                <div className="icon" >
+                    {dark?<i class="fas fa-sun" onClick={changeTheme} ></i>: <i class="far fa-moon theme" onClick={changeTheme}></i>}
                 </div>
-                <IconButton size="small">
-                    <div className="icon" >
-                        {dark?<i class="fas fa-moon theme" onClick={changeTheme} ></i>: <i class="far fa-moon theme" onClick={changeTheme}></i>}
-                    </div>
-                </IconButton>
+            </IconButton>
       </header>
-        </div>
     )
 }
