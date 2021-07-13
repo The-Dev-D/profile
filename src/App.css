@@ -194,7 +194,7 @@ a {
 }
 .fieldset-appear {
   opacity: 0;
-  transform: translateX(-40%);
+  transform: translateX(-20%);
 }
 .fieldset-appear-active {
   opacity: 1;
@@ -202,5 +202,5 @@ a {
   transition: all 0.7s ease-out;
 }
 .theme {
-  color: black;
+  color: var(--color);
 }
