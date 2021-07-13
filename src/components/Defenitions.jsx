@@ -12,7 +12,14 @@ export default function Defenitions() {
             <fieldset className="fieldset">
                 <legend> {"<"}PROFILE{">"} </legend>
                 <b> Username : </b> dev-D <br/><br/>
+                  
                 <b> Education :</b> <br/> <br/>
+
+                <b> Education :</b> <br/>
+                &nbsp;&nbsp;&nbsp; <b>L.P  School :</b> St: Dominic Savio <br/>
+                &nbsp;&nbsp;&nbsp; <b>U.P School :</b> M.K.M <br/>
+                &nbsp;&nbsp;&nbsp; <b>H.S School :</b>M.K.M<br/>
+                &nbsp;&nbsp;&nbsp; <b>Degree :</b> B.P.C College Piravom<br/><br/>
 
                 &emsp;&emsp;<b>L.P  School :</b> St: Dominic Savio <br/>
                 &emsp;&emsp;<b>U.P School :</b> M.K.M <br/>
