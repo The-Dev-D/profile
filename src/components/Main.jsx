@@ -9,7 +9,7 @@ export default function Main() {
                     <CSSTransition
                     in={true}
                     appear={true}
-                    timeout={1200}
+                    timeout={1500}
                     classNames="cover"
                     >
                         <img className="cover" src="https://images.hdqwalls.com/wallpapers/linux-programmer-pixel-art-4k-ld.jpg" alt="" />
@@ -29,7 +29,7 @@ export default function Main() {
                         <CSSTransition
                         in={true}
                         appear={true}
-                        timeout={1200}
+                        timeout={1500}
                         classNames="profilename">
 
                             <div className="profilename">Dhaivath Lal</div>

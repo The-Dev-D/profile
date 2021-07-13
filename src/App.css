@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@326&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap');
 *{
-  transition: all 0.1s linear;
+  transition: color 50ms linear; 
   font-family: 'Rubik', sans-serif;
   margin: 0;
   padding: 0;
@@ -23,6 +25,8 @@ header{
   box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.845);
   background: var(--theme);
   z-index: 120;
+  color: var(--color);
+  transition: color 0s linear;
 }
 .flex {
   display: flex;
@@ -40,9 +44,13 @@ header{
 .vb{
   align-items: baseline;
 }
+.m1{
+  margin:0.5rem;
+}
 .profilename {
   font-weight: bold;
   margin-left: 0.5rem;
+  transform: translateY(-30%);
   height: fit-content;
   font-size: larger;
   z-index: 1;
@@ -53,6 +61,9 @@ i {
   cursor: pointer;
   color:var(--color);
 }
+b{
+  font-family: 'Overlock SC', cursive;
+}
 .coverpicture {
   overflow: hidden;
   margin-top: 0.5rem;
@@ -61,10 +72,12 @@ i {
 }
 .cover {
   width: 98vw;
-  background:linear-gradient(90deg,silver,white);
+  background:linear-gradient(90deg,var(--theme),rgba(255, 255, 255, 0.003));
   border-radius: 20px;
   aspect-ratio:4;
   object-fit: cover;
+  border: 1px solid var(--color);
+  transition: border-color 0.5s linear;
 }
 .profile-wrap {
   bottom: 0;
@@ -73,7 +86,7 @@ i {
   position: absolute;
 }
 .profile{
-  width: 12vh;
+  width: 8vw;
   aspect-ratio: 1;
   border-radius: 10px;
   background:linear-gradient(45deg,rgb(165, 165, 165),rgb(255, 255, 255));
@@ -89,16 +102,26 @@ i {
 .wrapper{
   position: relative;
 }
+.segment {
+  display: flex;
+}
 fieldset {
-  width: 80vw;
+  width: 90vw;
   border: 1px solid rgba(128, 128, 128, 0.729);
   padding: 1rem;
   border-radius: 20px;
   font-weight: 500;
 }
+legend{
+  font-family: 'Otomanopee One', sans-serif;
+  font-size: large;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  margin-left: 1rem;
+}
 .fill{
   width: 100%;
-  margin-top: 4rem;
+  margin-top: 10vh;
 }
 footer {
   margin-top: 2rem;
@@ -110,6 +133,7 @@ footer {
 }
 .iconwrap{
   margin: 1rem;
+  transition: transform 0.1s ease-in;
 }
 a {
   text-decoration: none;
@@ -118,10 +142,10 @@ a {
   align-content: center;
   justify-items: center;
 }
-.iconwrap:hover {
+.roundbtn:hover {
   transform: scale(1.2);
+  transition: 0.1s ease-in;
 }
-
 .foot
 {
   margin-top: 2rem;
@@ -130,6 +154,13 @@ a {
 @media only screen and (max-width:720px) {
   .cover {
     aspect-ratio: 2;
+  }
+  fieldset {
+    width: 80vw;
+  }
+  .profile {
+    width: 12vh;
+    aspect-ratio: 1;
   }
 }
 
@@ -143,23 +174,32 @@ a {
 .cover-appear-active {
   transform: translateY(0%);
   opacity: 1;
-  transition: all 1.2s ease-out;
+  transition: all 1s ease-out;
 }
 .profile-appear {
   transform: translateY(100%);
 }
 .profile-appear-active {
   transform: translateY(0%);
-  transition: all 1.2s ease-out;
+  transition: all 1.5s ease-out;
 }
 .profilename-appear {
   opacity: 0;
-  transform: translateX(-100%);
+  transform: translate(-100%,-30%);
 }
 .profilename-appear-active {
   opacity: 1;
-  transform: translateX(0%);
+  transform: translate(0%,-30%);
   transition: all 1.2s ease-out;
+}
+.fieldset-appear {
+  opacity: 0;
+  transform: translateX(-40%);
+}
+.fieldset-appear-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 0.7s ease-out;
 }
 .theme {
   color: black;

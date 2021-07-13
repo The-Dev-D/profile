@@ -1,31 +1,50 @@
 import { IconButton } from '@material-ui/core'
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 
 export default function Navbar() {
-    const [dark, setdark] = useState(false)
-    let theme = document.querySelector(":root");
-    const changeTheme = ()=> {
-        setdark(!dark)
-        if(!dark)
+
+    const [dark, setdark] = useState()
+    
+    useEffect(() => {
+        const now =localStorage.getItem('theme');
+        if(now!==null)
         {
-            theme.style.setProperty("--theme","#0f111c");
-            theme.style.setProperty("--color","#ffffff");
+            if(now==="true")
+            {
+                setdark(true);
+            }
+            else
+            {
+                setdark(false);
+            }
         }
-        else
-        {
-            theme.style.setProperty("--theme","#ffffff");
-            theme.style.setProperty("--color","#000000");
-        }
+            
+    },[])
+
+    useEffect(() => {
+    localStorage.setItem('theme',dark);
+    if(dark)
+    {
+        document.querySelector(":root").style.setProperty("--theme","#0f111c");
+        document.querySelector(":root").style.setProperty("--color","#ffffff");
     }
+    else
+    {
+        document.querySelector(":root").style.setProperty("--theme","#ffffff");
+        document.querySelector(":root").style.setProperty("--color","#000000");
+    }
+
+    }, [dark])
+
     return (
         <header className="flex vc sb">
             <div className="name theme">
                 <i class="fa fa-terminal theme" aria-hidden="true"></i>
                 dev:D
             </div>
-            <IconButton size="small">
+            <IconButton size="small" onClick={()=> setdark(!dark)}>
                 <div className="icon" >
-                    {dark?<i class="fas fa-sun" onClick={changeTheme} ></i>: <i class="far fa-moon theme" onClick={changeTheme}></i>}
+                    {dark?<i class="fas fa-sun" ></i>: <i class="far fa-moon theme" ></i>}
                 </div>
             </IconButton>
       </header>
