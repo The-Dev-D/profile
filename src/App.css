@@ -21,12 +21,15 @@ header{
   top: 0;
   position:sticky;
   top:0;
-  height: 3.2rem;
+  height: 8vh;
   box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.845);
   background: var(--theme);
   z-index: 120;
   color: var(--color);
   transition: color 0s linear;
+}
+.name {
+  font-size: large;
 }
 .flex {
   display: flex;
@@ -71,7 +74,7 @@ b{
   padding: 0;
 }
 .cover {
-  width: 98vw;
+  width: 95%;
   background:linear-gradient(90deg,var(--theme),rgba(255, 255, 255, 0.003));
   border-radius: 20px;
   aspect-ratio:4;
@@ -81,7 +84,7 @@ b{
 }
 .profile-wrap {
   bottom: 0;
-  left: 2rem;
+  left: 4vw;
   transform: translateY(50%);
   position: absolute;
 }
@@ -151,6 +154,18 @@ a {
   margin-top: 2rem;
   width: 100%;
 }
+.none {
+  display: none;
+}
+@media only screen and (max-width:1024px) {
+  .profile {
+    width: 12vh;
+    aspect-ratio: 1;
+  }
+  header{
+    height: 6vh;
+  }
+}
 @media only screen and (max-width:720px) {
   .cover {
     aspect-ratio: 2;
@@ -158,12 +173,13 @@ a {
   fieldset {
     width: 80vw;
   }
-  .profile {
-    width: 12vh;
-    aspect-ratio: 1;
+  .profile-wrap{
+    left: 6vw;
+  }
+  header {
+    height: 7vh;
   }
 }
-
 
 /* intros */
 
