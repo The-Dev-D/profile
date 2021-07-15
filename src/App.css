@@ -154,6 +154,9 @@ a {
   margin-top: 2rem;
   width: 100%;
 }
+.none {
+  display: none;
+}
 @media only screen and (max-width:1024px) {
   .profile {
     width: 12vh;
