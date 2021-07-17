@@ -4,14 +4,19 @@ import Main from './components/Main';
 import Defenitions from './components/Defenitions';
 import Profiles from './components/Profiles';
 import Footer from './components/Footer';
-// import {useState} from 'react';
+import {useState} from 'react';
+import {useEffect} from 'react';
 
 function App() {
-  // const [load, setload] = useState(false);
+ 
+  const [load,stopLoad] = useState(false);
+  useEffect(() => {
+    console.log("loaded..."+load)
+  }, [load])
   return (
     <>
       <Navbar/>
-      <Main/>
+      <Main toggle={stopLoad} />
       <Defenitions/>
       <Profiles/>
       <Footer/>
