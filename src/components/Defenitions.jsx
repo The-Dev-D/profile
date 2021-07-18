@@ -28,7 +28,7 @@ export default function Defenitions() {
                 <b>Works on</b> : 
                 {
                     lang.map((value,index) => {
-                        return <Fields key={index} icon={value.icon} value={value.name}/>
+                        return <> <Fields key={index} icon={value.icon} value={value.name}/></>
                     })
                 }
 
