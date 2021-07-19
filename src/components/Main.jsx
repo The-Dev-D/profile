@@ -8,7 +8,7 @@ export default function Main(props) {
                 <div className="coverpicture flex vc hc">
 
                     <CSSTransition in={true} appear={true} timeout={1500} classNames="cover">
-                        <img onLoad={()=>props.toggle(true)} className="cover" src="https://images.hdqwalls.com/wallpapers/linux-programmer-pixel-art-4k-ld.jpg" alt="" />
+                        <img className="cover" src={props.coverPhoto} alt="" />
                     </CSSTransition>
                     
                     <div className="profile-wrap flex hc vb">
