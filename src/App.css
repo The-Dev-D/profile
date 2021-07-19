@@ -164,6 +164,21 @@ a:hover > .roundbtn {
 .none {
   display: none;
 }
+.fullwrapper {
+  height: 100vh;
+  width: 100vw;
+  background: var(--theme);
+  color: var(--color);
+}
+.loadicon {
+  position: relative;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+}
+.loadicon > div {
+  position: absolute;
+}
 @media only screen and (max-width:1024px) {
   .profile {
     width: 12vh;

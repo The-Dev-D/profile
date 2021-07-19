@@ -1,52 +1,38 @@
 import { IconButton } from '@material-ui/core'
-import React,{useState,useEffect} from 'react'
+import React, { Component } from 'react'
 
-export default function Navbar() {
-
-    const [dark, setdark] = useState()
-    
-    useEffect(() => {
-        const now =localStorage.getItem('theme');
-        if(now!==null)
-        {
-            if(now==="true")
-            {
-                setdark(true);
-            }
-            else
-            {
-                setdark(false);
-            }
-        }
-            
-    },[])
-
-    useEffect(() => {
-    localStorage.setItem('theme',dark);
-    if(dark)
+export default class Navbar extends Component {
+    constructor(props)
     {
-        document.querySelector(":root").style.setProperty("--theme","#0f111c");
-        document.querySelector(":root").style.setProperty("--color","#ffffff");
+        super(props);
+        this.state = {theme : props.themeAccent}
     }
-    else
-    {
-        document.querySelector(":root").style.setProperty("--theme","#ffffff");
-        document.querySelector(":root").style.setProperty("--color","#000000");
-    }
-
-    }, [dark])
-
-    return (
-        <header className="flex vc sb">
+    render() {
+        return (
+            <header className="flex vc sb">
             <div className="name theme">
                 <i class="fa fa-terminal theme" aria-hidden="true"></i>
                 dev:D
             </div>
-            <IconButton size="small" onClick={()=> setdark(!dark)}>
+            <IconButton size="small" onClick={()=> this.setState({theme:!this.state.theme})}>
                 <div className="icon" >
-                    {dark?<i class="fas fa-sun" ></i>: <i class="far fa-moon theme" ></i>}
+                    {this.state.theme?<i class="fas fa-sun" ></i>: <i class="far fa-moon theme" ></i>}
                 </div>
             </IconButton>
-      </header>
-    )
+            </header>
+        )
+    }
+    componentDidUpdate() {
+        localStorage.setItem('theme',this.state.theme);
+        if(this.state.theme)
+        {
+            document.querySelector(":root").style.setProperty("--theme","#0f111c");
+            document.querySelector(":root").style.setProperty("--color","#ffffff");
+        }
+        else 
+        {
+            document.querySelector(":root").style.setProperty("--theme","#ffffff");
+            document.querySelector(":root").style.setProperty("--color","#000000");
+        }
+    }
 }
