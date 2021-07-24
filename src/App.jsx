@@ -7,15 +7,15 @@ import Profiles from './components/Profiles';
 import Footer from './components/Footer';
 import {useState} from 'react';
 
-let fetchTheme=false;
+let fetchTheme=true;
 const now =localStorage.getItem('theme');
 if(now!==null)
 {
-    if(now==="true")
+    if(now==="false")
     {
         fetchTheme = true;
-        document.querySelector(":root").style.setProperty("--theme","#0f111c");
-        document.querySelector(":root").style.setProperty("--color","#ffffff");
+        document.querySelector(":root").style.setProperty("--theme","#ffffff");
+        document.querySelector(":root").style.setProperty("--color","#000000");
     }
 }
 const ShowContent = (props) => {

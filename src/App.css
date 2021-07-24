@@ -9,8 +9,8 @@
   line-height: 1.5rem;
 }
 :root {
-  --theme : white;
-  --color : black;
+  --theme : #0f111c;
+  --color : #ffffff;
 }
 body{
   background: var(--theme);
