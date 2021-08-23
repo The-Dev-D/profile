@@ -7,44 +7,42 @@ import Profiles from './components/Profiles';
 import Footer from './components/Footer';
 import {useState} from 'react';
 
-let fetchTheme=true;
-const now =localStorage.getItem('theme');
-if(now!==null)
-{
-    if(now==="false")
+function App() {
+
+  let darkState = !(localStorage.getItem('theme') === 'false');
+
+    if(!darkState)
     {
-        fetchTheme = true;
-        document.querySelector(":root").style.setProperty("--theme","#ffffff");
+        document.querySelector(":root").style.setProperty("--from","#d4f3ff");
+        document.querySelector(":root").style.setProperty("--to","#97ffc5");
         document.querySelector(":root").style.setProperty("--color","#000000");
     }
+
+  const [load,setLoad] = useState(false);
+  const coverUrl = new Image();
+  coverUrl.src = "https://images.hdqwalls.com/wallpapers/linux-programmer-pixel-art-4k-ld.jpg";
+  const [start, setStart] = useState(false);
+  coverUrl.onload = () => {
+      setLoad(true)
+  }
+  console.log(darkState);
+  return (
+    <>
+      {
+        load? <ShowContent appearState={start} appearMethod={setStart} mainCover={coverUrl.src} theme={darkState}/> : <Loader />
+      }
+    </>
+  );
 }
 const ShowContent = (props) => {
   return (
     <>
       <Navbar themeAccent={props.theme}/>
-      <Main coverPhoto={props.mainCover}/>
-      <Defenitions/>
-      <Profiles/>
+      <Main appearState={props.appearState} appearMethod={props.appearMethod} coverPhoto={props.mainCover}/>
+      <Defenitions appearState={props.appearState} />
+      <Profiles appearState={props.appearState}/>
       <Footer/>
     </>
   )
 }
-
-function App() {
- 
-  const [load,setLoad] = useState(false);
-  const coverUrl = new Image();
-  coverUrl.src = "https://images.hdqwalls.com/wallpapers/linux-programmer-pixel-art-4k-ld.jpg";
-  coverUrl.onload = () => {
-      setLoad(true)
-  }
-  return (
-    <>
-      {
-        load? <ShowContent mainCover={coverUrl.src} theme={fetchTheme}/> : <Loader theme={fetchTheme} />
-      }
-    </>
-  );
-}
-
 export default App;

@@ -9,15 +9,15 @@ const Tab = () => {
     )
 }
 
-export default function Defenitions() {
+export default function Defenitions(props) {
     return (
         <div className="fill flex vc hc">
-        <CSSTransition in={true} appear={true} timeout={900} classNames="fieldset">
+        <CSSTransition in={props.appearState} appear={false} timeout={900} classNames="fieldset">
 
             <fieldset className="fieldset">
-                <legend align="center"> {"<"}PROFILE{">"} </legend>
+                <legend align="center"> {"<"}Personal Info{">"} </legend>
                 <Fields field="Username" value="dev-D"/> <br/><br/>
-                  
+                <Fields field="D.O.B" value="25/05/2002" /><br/><br/>
                 <b> Education :</b> <br/> <br/>
 
                 <Tab/><Fields field="L.P School" value="St: Dominic Savio"/> <br/>

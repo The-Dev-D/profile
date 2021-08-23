@@ -9,11 +9,12 @@
   line-height: 1.5rem;
 }
 :root {
-  --theme : #0f111c;
+  --from : #04619f;
+  --to : #081B33;
   --color : #ffffff;
 }
 body{
-  background: var(--theme);
+  background: linear-gradient(145deg, var(--from) 0%, var(--to) 90%);
   color: var(--color);
 }
 header{
@@ -23,10 +24,11 @@ header{
   top:0;
   min-height: 8vh;
   box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.845);
-  background: var(--theme);
+  background: var(--from);
   z-index: 120;
   color: var(--color);
   transition: color 0s linear;
+  box-shadow: 0px 1px 2px var(--color);
 }
 .name {
   font-size: large;
@@ -51,9 +53,9 @@ header{
   margin:0.5rem;
 }
 .profilename {
+  white-space:nowrap;
+  width:100%;
   font-weight: bold;
-  margin-left: 0.5rem;
-  transform: translateY(-30%);
   height: fit-content;
   font-size: larger;
   z-index: 1;
@@ -81,27 +83,34 @@ b{
   object-fit: cover;
   border: 1px solid var(--color);
   transition: border-color 0.5s linear;
+  transform: scale(0.5);
+  opacity: 0;
+  transition: 2s ease;
 }
 .profile-wrap {
+  left: 50%;
   bottom: 0;
-  left: 4vw;
-  transform: translateY(50%);
+  transform: translate(-50%,50%);
   position: absolute;
 }
 .profile{
-  width: 8vw;
-  height: 8vw;
+  width: 10vw;
+  height: 10vw;
+  transform: rotate(-45deg) scale(1.45);
   aspect-ratio: 1;
-  border-radius: 10px;
   background:linear-gradient(45deg,rgb(165, 165, 165),rgb(255, 255, 255));
-  border: 2px solid rgb(255, 255, 255);
   box-shadow: 1px 1px 4px --var(color);
   border-radius: 10px;
 }
 .picwrap {
-  
+  position: relative;
+  width: 15vw;
+  height: 10vw;
+  border: 2px solid white;
+  border-radius: 10px;
   z-index: 2;
   overflow: hidden;
+  transform: rotate(45deg) translateY(15%);
 }
 .wrapper{
   position: relative;
@@ -116,6 +125,7 @@ fieldset {
   border-radius: 20px;
   font-weight: 500;
   margin-top: 3%;
+  opacity: 0;
 }
 legend{
   font-family: 'Otomanopee One', sans-serif;
@@ -132,7 +142,7 @@ legend{
 }
 .fill{
   width: 100%;
-  margin-top: 10vh;
+  margin-top: 15vh;
 }
 footer {
   margin-top: 2rem;
@@ -180,65 +190,93 @@ a:hover > .roundbtn {
   position: absolute;
 }
 @media only screen and (max-width:1024px) {
-  .profile {
-    width: 12vh;
-    height: 12vh;
-    aspect-ratio: 1;
-  }
   header{
     height: 6vh;
   }
 }
 @media only screen and (max-width:720px) {
+  .profilename {
+    font-size: medium;
+  }
+  .fill {
+    margin-top:20vh;
+  }
+  .picwrap {
+    height: 16vw;
+    width: 24vw;
+  }
   .cover {
     aspect-ratio: 2;
   }
   fieldset {
     width: 80vw;
   }
-  .profile-wrap{
-    left: 6vw;
-  }
   header {
     height: 7vh;
+  }
+  .profile{
+    width: 100%;
+    height: fit-content;
+  }
+}
+@media only screen and (max-width:580px) {
+  .picwrap {
+    height: 25vw;
+    width: 40vw;
+  }
+  .fill {
+    margin-top: 25vw;
+  }
+  .profile-wrap {
+    left:60%;
   }
 }
 
 /* intros */
 
-.cover-appear {
+.cover-enter {
   opacity: 0;
-  transform: translateY(-90%);
+  transform: scale(0);
 }
-.cover-appear-active {
-  transform: translateY(0%);
+.cover-enter-active {
+  transform: scale(1);
   opacity: 1;
-  transition: all 1s ease-out;
+  transition: all 1.5s ease-out;
+}
+.cover-enter-done {
+  transform: scale(1);
+  opacity: 1;
 }
 .profile-appear {
-  transform: translateY(100%);
+  opacity: 0;
+  transform: translate(100%,100%) rotate(-45deg) scale(1.45);
 }
 .profile-appear-active {
-  transform: translateY(0%);
+  opacity: 1;
+  transform: translate(0%,0%) rotate(-45deg) scale(1.45);
   transition: all 1.5s ease-out;
 }
 .profilename-appear {
   opacity: 0;
-  transform: translate(-100%,-30%);
+  transform: translateX(-100%);
 }
 .profilename-appear-active {
   opacity: 1;
-  transform: translate(0%,-30%);
+  transform: translateX(0%);
   transition: all 1.2s ease-out;
 }
-.fieldset-appear {
+.fieldset-enter {
   opacity: 0;
   transform: translateX(-20%);
 }
-.fieldset-appear-active {
+.fieldset-enter-active {
   opacity: 1;
   transform: translateX(0%);
   transition: all 0.7s ease-out;
+}
+.fieldset-enter-done {
+  opacity: 1;
+  transform: translateX(0%);
 }
 .theme {
   color: var(--color);
