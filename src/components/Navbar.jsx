@@ -26,12 +26,16 @@ export default class Navbar extends Component {
         localStorage.setItem('theme',this.state.theme);
         if(this.state.theme)
         {
-            document.querySelector(":root").style.setProperty("--theme","#0f111c");
+            console.log("dark "+ this.state.theme)
+            document.querySelector(":root").style.setProperty("--from","#04619f");
+            document.querySelector(":root").style.setProperty("--to","#081B33");
             document.querySelector(":root").style.setProperty("--color","#ffffff");
         }
         else 
         {
-            document.querySelector(":root").style.setProperty("--theme","#ffffff");
+            console.log("dark "+ this.state.theme)
+            document.querySelector(":root").style.setProperty("--from","#d4f3ff");
+            document.querySelector(":root").style.setProperty("--to","#97ffc5");
             document.querySelector(":root").style.setProperty("--color","#000000");
         }
     }

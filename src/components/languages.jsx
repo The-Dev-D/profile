@@ -22,6 +22,6 @@ export const lang = [
     {
         name: "SQL ",
         icon: "fa fa-database"
-    },
+    }
     
 ]
