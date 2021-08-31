@@ -9,27 +9,28 @@
   line-height: 1.5rem;
 }
 :root {
-  --from : #04619f;
-  --to : #07305e;
+  --from : #1B1B3A;
+  --to : #1e2945;
   --color : #ffffff;
 }
 body{
   background-size: 400% 400%;
-  background: linear-gradient(100deg, var(--from) 0%, var(--to) 50% , var(--from) 90%);
+  background: linear-gradient(100deg, var(--from) , var(--to) , var(--from) );
   color: var(--color);
   background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
 }
-header{
+.header{
   position: sticky;
   top: 0;
   background-size: 400% 400%;
-  min-height: 8vh;
+  min-height: 3rem;
   box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.845);
-  background: linear-gradient(100deg, var(--from) 0%, var(--to) 90%) ;
+  background: var(--from);
   z-index: 120;
   color: var(--color);
+  height: 10vh;
   box-shadow: 0px 1px 2px var(--color);
   animation: gradient 1s ease infinite;
 }
@@ -57,7 +58,7 @@ header{
 }
 .profilename {
   white-space:nowrap;
-  width:100%;
+  margin: 1rem;
   font-weight: bold;
   height: fit-content;
   font-size: larger;
@@ -91,32 +92,30 @@ b{
   transition: 2s ease;
 }
 .profile-wrap {
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%,50%);
-  position: absolute;
+    min-height: fit-content;
+    min-width: fit-content;
 }
 .profile{
-  width: 10vw;
-  height: 10vw;
-  transform: rotate(-45deg) scale(1.45);
-  aspect-ratio: 1;
+  min-width: 20vw;
+  min-height: 20vw;
+  margin: 1rem;
+  border: 2px solid white;
   background:linear-gradient(45deg,rgb(165, 165, 165),rgb(255, 255, 255));
   box-shadow: 1px 1px 4px --var(color);
   border-radius: 10px;
+  border-radius: 0px 30px 30px 30px;
 }
 .picwrap {
-  position: relative;
-  width: 15vw;
-  height: 10vw;
-  border: 2px solid white;
-  border-radius: 10px;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 0px 10px 10px 10px;
   z-index: 2;
   overflow: hidden;
-  transform: rotate(45deg) translateY(15%);
 }
 .wrapper{
+  margin-top: 5vh;
   position: relative;
+  height: 40vh;
 }
 .segment {
   display: flex;
@@ -131,10 +130,10 @@ fieldset {
   opacity: 0;
 }
 legend{
-  font-family: 'Otomanopee One', sans-serif;
   font-size: large;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
+  font-weight: 900;
+  font-family: 'Overlock SC', cursive;
+  letter-spacing: 0.09rem
 }
 .iconwrap {
   display: grid;
@@ -145,7 +144,7 @@ legend{
 }
 .fill{
   width: 100%;
-  margin-top: 15vh;
+  margin-top: 5vh;
 }
 footer {
   margin-top: 2rem;
@@ -197,7 +196,7 @@ a:hover > .roundbtn {
 		background-position: 0% 50%;
 	}
 	50% {
-		background-position: 100% 50%;
+		background-position: 100% 100%;
 	}
 	100% {
 		background-position: 0% 50%;
@@ -215,10 +214,6 @@ a:hover > .roundbtn {
   .fill {
     margin-top:20vh;
   }
-  .picwrap {
-    height: 16vw;
-    width: 24vw;
-  }
   .cover {
     aspect-ratio: 2;
   }
@@ -229,46 +224,34 @@ a:hover > .roundbtn {
     height: 7vh;
   }
   .profile{
-    width: 100%;
+    width: 80%;
     height: fit-content;
   }
 }
 @media only screen and (max-width:580px) {
-  .picwrap {
-    height: 25vw;
-    width: 40vw;
+  .profile {
+    height: 19vh;
+    width: 19vh;
+  }
+  .wrapper {
+    height: 40vw;
   }
   .fill {
-    margin-top: 25vw;
+    margin-top: 3vh;
   }
-  .profile-wrap {
-    left:60%;
+  .header {
+    height: 8vh;
   }
 }
 
 /* intros */
 
-.cover-enter {
-  opacity: 0;
-  transform: scale(0);
-}
-.cover-enter-active {
-  transform: scale(1);
-  opacity: 1;
-  transition: all 1.5s ease-out;
-}
-.cover-enter-done {
-  transform: scale(1);
-  opacity: 1;
-}
 .profile-appear {
   opacity: 0;
-  transform: translate(100%,100%) rotate(-45deg) scale(1.45);
 }
 .profile-appear-active {
   opacity: 1;
-  transform: translate(0%,0%) rotate(-45deg) scale(1.45);
-  transition: all 1.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .profilename-appear {
   opacity: 0;
@@ -277,7 +260,8 @@ a:hover > .roundbtn {
 .profilename-appear-active {
   opacity: 1;
   transform: translateX(0%);
-  transition: all 1.2s ease-out;
+  transition: all 1s ease-out;
+  transition-delay: 0.6s;
 }
 .fieldset-enter {
   opacity: 0;
