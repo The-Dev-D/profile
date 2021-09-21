@@ -6,6 +6,8 @@ import Defenitions from './components/Defenitions';
 import Profiles from './components/Profiles';
 import Footer from './components/Footer';
 import {useState} from 'react';
+import Particles from 'react-particles-js';
+import {config} from './AppParticleConfig';
 
 function App() {
 
@@ -38,10 +40,11 @@ const ShowContent = (props) => {
   return (
     <>
       <Navbar themeAccent={props.theme}/>
-      <Main appearState={props.appearState} appearMethod={props.appearMethod} coverPhoto={props.mainCover}/>
-      <Defenitions appearState={props.appearState} />
-      <Profiles appearState={props.appearState}/>
-      <Footer/>
+      <Particles params={config} height="60vh"/>
+        <Main appearState={props.appearState} appearMethod={props.appearMethod} coverPhoto={props.mainCover}/>
+        <Defenitions appearState={props.appearState} />
+        <Profiles appearState={props.appearState}/>
+        <Footer/>
     </>
   )
 }

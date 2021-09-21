@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap');
 *{
-  transition: color 50ms linear; 
+  transition: color 50ms linear;
   font-family: 'Rubik', sans-serif;
   margin: 0;
   padding: 0;
@@ -33,6 +33,10 @@ body{
   height: 10vh;
   box-shadow: 0px 1px 2px var(--color);
   animation: gradient 1s ease infinite;
+}
+canvas {
+  position: absolute;
+  opacity: 0.6;
 }
 .name {
   font-size: large;
@@ -125,6 +129,7 @@ fieldset {
   border: 1px solid rgba(128, 128, 128, 0.729);
   padding: 1rem;
   border-radius: 20px;
+  background: linear-gradient(45deg,var(--from),var(--to));
   font-weight: 500;
   margin-top: 3%;
   opacity: 0;
