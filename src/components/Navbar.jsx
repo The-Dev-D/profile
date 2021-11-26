@@ -9,7 +9,7 @@ export default class Navbar extends Component {
     }
     render() {
         return (
-            <header className="flex vc sb">
+            <header className="header flex vc sb">
             <div className="name theme">
                 <i class="fa fa-terminal theme" aria-hidden="true"></i>
                 dev:D
@@ -27,8 +27,8 @@ export default class Navbar extends Component {
         if(this.state.theme)
         {
             console.log("dark "+ this.state.theme)
-            document.querySelector(":root").style.setProperty("--from","#04619f");
-            document.querySelector(":root").style.setProperty("--to","#081B33");
+            document.querySelector(":root").style.setProperty("--from","#1B1B3A");
+            document.querySelector(":root").style.setProperty("--to","#1e2945d1");
             document.querySelector(":root").style.setProperty("--color","#ffffff");
         }
         else 
