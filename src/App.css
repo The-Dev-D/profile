@@ -35,7 +35,8 @@ body{
   animation: gradient 1s ease infinite;
 }
 canvas {
-  position: absolute;
+  position: fixed;
+  top: 10vh;
   opacity: 0.6;
 }
 .name {
@@ -129,9 +130,10 @@ fieldset {
   border: 1px solid rgba(128, 128, 128, 0.729);
   padding: 1rem;
   border-radius: 20px;
-  background: linear-gradient(45deg,var(--from),var(--to));
+  background: var(--to);
   font-weight: 500;
   margin-top: 3%;
+  z-index: 10;
   opacity: 0;
 }
 legend{

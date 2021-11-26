@@ -40,7 +40,7 @@ const ShowContent = (props) => {
   return (
     <>
       <Navbar themeAccent={props.theme}/>
-      <Particles params={config} height="60vh"/>
+      <Particles className="particles" params={config} height="60vh"/>
         <Main appearState={props.appearState} appearMethod={props.appearMethod} coverPhoto={props.mainCover}/>
         <Defenitions appearState={props.appearState} />
         <Profiles appearState={props.appearState}/>

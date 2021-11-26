@@ -28,7 +28,7 @@ export default class Navbar extends Component {
         {
             console.log("dark "+ this.state.theme)
             document.querySelector(":root").style.setProperty("--from","#1B1B3A");
-            document.querySelector(":root").style.setProperty("--to","#1e2945");
+            document.querySelector(":root").style.setProperty("--to","#1e2945d1");
             document.querySelector(":root").style.setProperty("--color","#ffffff");
         }
         else 
