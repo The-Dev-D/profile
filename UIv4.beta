@@ -1,0 +1,93 @@
+*{
+  margin:0;
+  padding:0;
+  color:white;
+}
+
+body{
+  background:
+}
+.wrap{
+  background: rgb(20,18,61);
+background: linear-gradient(90deg, rgba(20,18,61,1) 0%, rgba(44,9,121,1) 35%, rgba(43,84,153,1) 100%);
+}
+header  {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:2.5rem;
+}
+ul{
+  display:flex;
+}
+li{
+  margin-right:1rem;
+  list-style:none;
+}
+h6{
+  font-size:medium;
+  margin-left:1rem;
+  font-weight:normal;
+}
+.area{
+  height:60vh;
+}
+.desc{
+  display:flex;
+}
+.desctxt {
+  width:50%;
+  height:55vh;
+  display:grid;
+  align-content:center;
+  justify-items:center;
+  border:1px solid white;
+}
+.picdesc {
+  width:50%;
+  height:55vh;
+  display:grid;
+  align-content:center;
+  justify-items:center;
+  border:1px solid white;
+}
+.picback{
+  background:cyan;
+  height:38vh;
+  transform:rotateX(10deg);
+  width:30vh;
+  border-radius: 60px;
+  box-shadow:0px 0px 10px 5px cyan;
+}
+.picback::before {
+  content:"i";
+  height:100rem;
+  width:2rem;
+  background:cyan;
+}
+
+
+
+
+<body>
+  <div class="wrap">
+  <header> <h6>dev-D</h6>
+  <ul>
+    <li>contact</li>
+    <li>something else</li>
+  </ul>
+  </header>
+    <div class="area">
+      <div class="desc">
+        <div class="desctxt">
+        <h2>I'm Dhaivath</h2>
+         <p>code like no tomorrow </p>
+        </div>
+        <div class="picdesc">
+          <div class="picback">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
