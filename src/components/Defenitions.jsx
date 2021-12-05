@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Fields from './Fields';
 import { lang } from './languages';
 
@@ -11,7 +10,7 @@ const Tab = () => {
 
 export default function Defenitions(props) {
     return (
-        <div className="fill flex vc hc">
+        <div className="fieldsegment flex">
             <fieldset className="fieldset">
                 <legend align="center"> {"<"}PERSONAL INFO{">"} </legend>
                 <Fields field="Username" value="dev-D"/> <br/><br/>
