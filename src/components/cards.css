@@ -36,3 +36,9 @@
         transform: scale(1.1);
     }
 }
+@media (orientation: portrait) {
+    .card {
+        width: 20%;
+        margin: 1% 2% 1% 2%;
+    }
+}

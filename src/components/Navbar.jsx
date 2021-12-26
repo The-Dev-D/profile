@@ -14,7 +14,7 @@ export default class Navbar extends Component {
                     <div className="flex">Contact &nbsp;</div>
                 </nav>
                 <div className="segment">
-                    <div className="desc">
+                    <div className="desc disc">
                         <div className="grid">
                             <h1 style={{display:"flex"}}> Hi... &nbsp; <div style={{color:"#00ff99"}}> I'm Dhaivath Lal </div> </h1>
                             <h5>code like no tomorrow</h5>
@@ -26,7 +26,7 @@ export default class Navbar extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="desc">
+                    <div className="desc img">
                         <img className="svg" src={require("./graph.png").default} alt="" />
                         <img className="pic" src={require("./alphabgpic.png").default} onload={()=> {this.props.pic(true)}} alt="" />
                     </div>
