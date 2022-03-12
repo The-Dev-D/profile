@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import './bubble.css'
 class Fields extends Component {
 
     constructor(props)
@@ -10,7 +10,7 @@ class Fields extends Component {
     render() {
         return (
          <>
-            {this.props.field&& <> <b>{this.props.field}</b> : </>} {this.props.value} {this.props.icon&& <> <i class={this.props.icon} style={{color:this.clr}}></i> </> }
+            {this.props.field&& <> <b>{this.props.field}</b> : </>} {this.props.icon&& <> <i className={this.props.icon} style={{color:this.clr,margin:"0rem"}}></i> </> }{this.props.value}
          </>
         )
     }
