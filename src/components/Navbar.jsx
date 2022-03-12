@@ -21,8 +21,8 @@ export default class Navbar extends Component {
                             <div style={{width:"100%",marginTop:"1rem"}} className="flex">
                                 <Bubble color="#0066ff" profile="https://www.facebook.com/dhaivath.lal" icon="fab fa-facebook "  />
                                 <Bubble color="" profile="https://www.instagram.com/dhaivath_lal/" icon="fab fa-instagram " />
-                                <Bubble color="#404040" profile="#" icon="fab fa-github " />
-                                <Bubble color="#33adff" profile="#" icon="fab fa-twitter "  />
+                                <Bubble color="#404040" profile="https://github.com/the-dev-d" icon="fab fa-github " />
+                                <Bubble color="#33adff" profile="https://twitter.com/DhaivathLal/" icon="fab fa-twitter "  />
                             </div>
                         </div>
                     </div>
@@ -31,7 +31,6 @@ export default class Navbar extends Component {
                         <img className="pic" src={require("./alphabgpic.png").default} onload={()=> {this.props.pic(true)}} alt="" />
                     </div>
                 </div>
-                <img className="waves" src={require("./waves.png").default} alt="" />
             </header>
         </>
         )

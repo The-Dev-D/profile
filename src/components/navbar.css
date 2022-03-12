@@ -23,6 +23,7 @@ header{
     justify-items: center;
     overflow: hidden;
     color: white;
+    clip-path: polygon(100% 0, 100% 90%, 42% 100%, 0 90%, 0 0);
 }
 nav{
     position: absolute;
@@ -33,13 +34,6 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-.waves{
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    transform: translateY(8%) rotateY(180deg);
-    z-index: 5;
 }
 ul{
     display: flex;

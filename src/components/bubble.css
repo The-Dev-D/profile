@@ -1,3 +1,18 @@
 .socialicons{
-    transform: scale(1.5);
+    transform: scale(1.6);
+}
+.programicons{
+    font-size: 1.5rem;
+}
+.socialpallete {
+    margin: 0.5rem;
+    transition: all 0.2s ease-in;
+}
+.socialpallete:hover{
+    transform: scale(1.2);
+    border: 1px solid rgba(255, 255, 255, 0.349);
+    border-width: 1px 2px 2px 1px;
+    background: linear-gradient(120deg,rgba(255, 255, 255, 0.356),rgba(0, 0, 255, 0));
+    border-radius: 10px;
+    border-width: 0px 1px 1px 0px;
 }

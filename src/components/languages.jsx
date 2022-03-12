@@ -1,4 +1,4 @@
-export const lang = [
+export const web = [
     {
         name: "HTML ",
         icon: "fab fa-html5 m1",
@@ -31,3 +31,21 @@ export const lang = [
     }
     
 ]
+
+export const lang = [
+    {
+        name: " C ",
+        icon: "devicon-c-plain",
+        color: "#2F77B5"
+    },
+    {
+        name: " C++ ",
+        icon: "devicon-cplusplus-plain",
+        color: "#318DDE"
+    },
+    {
+        name: " Python ",
+        icon: "devicon-python-plain",
+        color: "yellow"
+    }
+] 

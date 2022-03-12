@@ -1,6 +1,6 @@
 import React from 'react';
 import Fields from './Fields';
-import { lang } from './languages';
+import { web,lang } from './languages';
 
 const Tab = () => {
     return(
@@ -21,12 +21,23 @@ export default function Defenitions(props) {
                 <Tab/><Fields field="H.S School" value="M.K.M" /> <br/>
                 <Tab/><Fields field="Degree" value="B.P.C College Piravom" /> <br/>
                 <br/>
-                <b>Works on</b> : 
+                <Fields field="Prefered OS" value="Linux - " icon="fab fa-linux programicons" color="white" /> Manjaro, Kali, Pop OS.
+                <br/>
+                <br/>
+                <b>Works on :</b> <br/> <br/>
+                &nbsp; Web : &nbsp;
                 {
-                    lang.map((value,index) => {
-                        return <> <Fields key={index} icon={value.icon} value={value.name} color={value.color}/></>
+                    web.map((value,index) => {
+                        return <> <Fields key={index} icon={value.icon} value={value.name} color={value.color}/> &nbsp; &nbsp; </>
                     })
-                }   
+                }
+                <br/> <br/>
+                &nbsp; Programming : 
+                {
+                    lang.map((data,index)=>{
+                        return <> <Fields key={index} icon={data.icon} value={data.name} color={data.color}/> &nbsp; &nbsp; </>
+                    })
+                }
             </fieldset>
         </div>
     )
